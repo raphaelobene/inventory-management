@@ -1,12 +1,12 @@
 "use client";
 
-import { useCreateProductMutation, useGetProductsQuery } from "@/state/api";
-import { PlusCircleIcon, SearchIcon } from "lucide-react";
-import { useState } from "react";
 import Header from "@/app/(components)/Header";
 import Rating from "@/app/(components)/Rating";
-import CreateProductModal from "./CreateProductModal";
+import { useCreateProductMutation, useGetProductsQuery } from "@/state/api";
+import { PlusCircleIcon, SearchIcon } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import CreateProductModal from "./CreateProductModal";
 
 type ProductFormData = {
   name: string;
@@ -81,7 +81,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <Image
-                  src={`https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/product${
+                  src={`https://s3-inventorymanagement-cdn.s3.us-east-1.amazonaws.com/product${
                     Math.floor(Math.random() * 3) + 1
                   }.png`}
                   alt={product.name}
